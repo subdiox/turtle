@@ -1,5 +1,5 @@
 // ID: 1W000000-X  望月義彦
-// indent: tab
+// indent: space 4
 
 /*
   コードの大まかな処理について解説を書く.
@@ -16,7 +16,7 @@
 int curX = 250; // 現在のx座業
 int curY = 250; // 現在のy座標
 int curDir = 0; // 現在の方向 (0:上 | 1:右 | 2:下 | 3:左)
-char curCommand[10000] = "M 250 250"; // 現時点でのコマンド文字列
+char curCommand[100000] = "M 250 250"; // 現時点でのコマンド文字列
 
 // ログの出力によりコマンド文字列を生成
 void logCommand(int x, int y)
@@ -79,11 +79,11 @@ void leftFunc()
 void outputToFile(char *command)
 {
     FILE *output;
-	output = fopen("output.svg", "w");
+    output = fopen("output.svg", "w");
     char content[100000];
     sprintf(content, "<svg width='500px' height='500px' xmlns='http://www.w3.org/2000/svg'>\n<path d='%s' stroke='red' fill='none' />\n</svg>", command);
-	fprintf(output, "%s", content);
-	fclose(output);
+    fprintf(output, "%s", content);
+    fclose(output);
     printf("\nSVG File is exported: 'output.svg'\n");
 }
 
