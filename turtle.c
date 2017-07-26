@@ -6,7 +6,9 @@
     logCommand関数では、現時点でのコマンド文字列に次のコマンド文字列を追加している。
     moveFunc関数では、moveコマンドが入力されたときのcurX、curYの移動処理後、logCommand関数を呼び出している。
     gotoFunc関数では、gotoコマンドが入力されたときのcurX、curYの移動処理後、logCommand関数を呼び出している。
-    rightFunc関数では、rightコマンドが入力されたときの
+    rightFunc関数では、rightコマンドが入力されたときのcurDirの変更処理をしている。
+    leftFunc関数では、leftコマンドが入力されたときのcurDirの変更処理をしている。
+    outputFile関数では、文字列をsvgファイルのテンプレートに埋め込み、output.svgを出力する処理をしている。
 */
 
 #include <stdio.h>
