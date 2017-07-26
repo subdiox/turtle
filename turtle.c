@@ -2,10 +2,11 @@
 // indent: space 4
 
 /*
-  コードの大まかな処理について解説を書く.
-  まずは, main 関数の全体的な流れから説明する.
-  適宜, [A], [B] といったコメントを入れて対応をわかるようにすること.
-
+    main関数では、入力文字列のパースをしながらコマンド文字列を追加した後、出力ファイルに書き出している。
+    logCommand関数では、現時点でのコマンド文字列に次のコマンド文字列を追加している。
+    moveFunc関数では、moveコマンドが入力されたときのcurX、curYの移動処理後、logCommand関数を呼び出している。
+    gotoFunc関数では、gotoコマンドが入力されたときのcurX、curYの移動処理後、logCommand関数を呼び出している。
+    rightFunc関数では、rightコマンドが入力されたときの
 */
 
 #include <stdio.h>
@@ -21,7 +22,6 @@ char curCommand[100000] = "M 250 250"; // 現時点でのコマンド文字列
 // ログの出力によりコマンド文字列を生成
 void logCommand(int x, int y)
 {
-    //printf("curX: %d, curY: %d\n", curX, curY);
     sprintf(curCommand, "%s L %d %d", curCommand, y, x);
 }
 
